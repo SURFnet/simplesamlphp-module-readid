@@ -2,6 +2,9 @@
 
 This module adds ReadID Ready App as auth source to simpleSAMLphp.
 
+This module was not created by ReadID or InnoValor (the company that created ReadID) and will not be supported by them. Please use [github issues](https://github.com/SURFnet/simplesamlphp-module-readid/issues/new) for any questions about this module. 
+A valid contract for using ReadID Ready is required for using this module. For more information on ReadID see https://www.readid.com/
+
 Add the authentication source to ```authsource.php```:
 ```
 $config = [
