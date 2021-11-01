@@ -1,10 +1,19 @@
 # ReadID simpleSAMLphp auth module
 
-This module adds ReadID Ready App as auth source to simpleSAMLphp.
+This module adds ReadID Ready App as auth source to simpleSAMLphp. ReadID Ready is an app that can read the data from your passport or other identity documents. Besides collecting your personal data from the document chip it also verifies if your identity document is valid and authentic. By using this module you can use an ID-card, passport or drivers-licence to authenticate.
 
-This module was not created by ReadID or InnoValor (the company that created ReadID) and will not be supported by them. Please use [github issues](https://github.com/SURFnet/simplesamlphp-module-readid/issues/new) for any questions about this module. 
+## Disclaimer
+This module was not created by ReadID or InnoValor (the company that created ReadID) and will not be supported by them. Please use [github issues](https://github.com/SURFnet/simplesamlphp-module-readid/issues/new) for any questions about this module.
 A valid contract for using ReadID Ready is required for using this module. For more information on ReadID see https://www.readid.com/
 
+## Usage
+SimpleSAMLphp makes use of Composer to manage dependencies and third-party modules. Just execute the following command:
+
+```composer.phar require surf/simplesamlphp-module-readid```
+
+Please note that if you don't have console access to your web server, you will need to deploy the module somewhere else and then copy the files to your server.
+
+## Config
 Add the authentication source to ```authsource.php```:
 ```
 $config = [
@@ -45,4 +54,3 @@ $config = [
 - apiReadSession, you probably won't have to change this
 - viewerApiKey is the ReadID key that can view sessions
 - callbackUser and callbackPassword are the user/password you configure at ReadID so that they can call our authenticated callback endpoint
-
